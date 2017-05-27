@@ -1,0 +1,24 @@
+{
+    "name": "hVenus/Jingdong-api",
+    "description": "京东接口",
+    "authors": [
+        {
+            "name": "zhumengxi",
+            "email": "zhumengxi@2quan.cn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "~6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "hVenus\\JingdongAPI\\": "src/"
+        }
+    },
+    "license": "MIT"
+}
