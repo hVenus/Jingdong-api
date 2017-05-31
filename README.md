@@ -5,7 +5,7 @@
 
 ## 安装
 
-composer install hVenus/Jingdong-api
+composer require hvenus/Jingdong-api
 
 ## 使用
 
