@@ -72,6 +72,9 @@ $jd->ExpressGetWaybillCode([
 * ADDRESS 京东地址库API
 * ECLP ECLP仓海API
 * EXPRESS 京东快递API
+* CATEGORY 类目API
+* DSP 京准通-快车API
+* SHOP 店铺API
 
 
 
