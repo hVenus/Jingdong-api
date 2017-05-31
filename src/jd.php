@@ -7,14 +7,17 @@ namespace hVenus\JingdongAPI;
 
 
 use hVenus\JingdongAPI\API\ADDRESS;
+use hVenus\JingdongAPI\API\CATEGORY;
+use hVenus\JingdongAPI\API\DSP;
 use hVenus\JingdongAPI\API\ECLP;
 use hVenus\JingdongAPI\API\EXPRESS;
 use hVenus\JingdongAPI\API\Helper;
+use hVenus\JingdongAPI\API\SHOP;
 use hVenus\JingdongAPI\Core\BaseClass;
 
 class JD extends BaseClass
 {
-    use Helper, ECLP, EXPRESS, ADDRESS;
+    use Helper, ECLP, EXPRESS, ADDRESS, CATEGORY, DSP, SHOP;
 
     /**
      * 获取各接口的具体地址
