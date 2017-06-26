@@ -5,7 +5,7 @@
 
 ## 安装
 
-composer install hVenus/Jingdong-api
+composer require hvenus/Jingdong-api
 
 ## 使用
 
@@ -75,8 +75,11 @@ $jd->ExpressGetWaybillCode([
 * CATEGORY 类目API
 * DSP 京准通-快车API
 * SHOP 店铺API
+* ORDER 订单API
 
+## 其它
 
+PHP函数不允许以数字开头，所以所有数字开头的前面都多加个“jd_”前缀以示区别.
 
 ## License
 
