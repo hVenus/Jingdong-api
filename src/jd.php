@@ -12,12 +12,13 @@ use hVenus\JingdongAPI\API\DSP;
 use hVenus\JingdongAPI\API\ECLP;
 use hVenus\JingdongAPI\API\EXPRESS;
 use hVenus\JingdongAPI\API\Helper;
+use hVenus\JingdongAPI\API\ORDER;
 use hVenus\JingdongAPI\API\SHOP;
 use hVenus\JingdongAPI\Core\BaseClass;
 
 class JD extends BaseClass
 {
-    use Helper, ECLP, EXPRESS, ADDRESS, CATEGORY, DSP, SHOP;
+    use Helper, ECLP, EXPRESS, ADDRESS, CATEGORY, DSP, SHOP, ORDER;
 
     /**
      * 获取各接口的具体地址
