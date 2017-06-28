@@ -5,7 +5,6 @@
 
 namespace hVenus\JingdongAPI;
 
-
 use hVenus\JingdongAPI\API\ADDRESS;
 use hVenus\JingdongAPI\API\CATEGORY;
 use hVenus\JingdongAPI\API\DSP;
