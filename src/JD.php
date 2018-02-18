@@ -5,6 +5,7 @@
 
 namespace hVenus\JingdongAPI;
 
+use hVenus\JingdongAPI\API\ACCOUNT;
 use hVenus\JingdongAPI\API\ADDRESS;
 use hVenus\JingdongAPI\API\CATEGORY;
 use hVenus\JingdongAPI\API\DSP;
@@ -17,7 +18,7 @@ use hVenus\JingdongAPI\Core\BaseClass;
 
 class JD extends BaseClass
 {
-    use Helper, ECLP, EXPRESS, ADDRESS, CATEGORY, DSP, SHOP, ORDER;
+    use Helper, ECLP, EXPRESS, ADDRESS, CATEGORY, DSP, SHOP, ORDER, ACCOUNT;
 
     /**
      * 获取各接口的具体地址
@@ -84,6 +85,29 @@ class JD extends BaseClass
      */
     public function Call($method, $param) {
         return $this->call_jd_function($method, $param);
+    }
+
+    /**
+     * 刷新京东的授权Token
+     * @param $param
+     * @return bool|mixed
+     */
+    public function RefreshToken($param) {
+        $config = [
+            'client_id' => $param['AppKey'],
+            'client_secret' => $param['AppSecret'],
+            'grant_type' => 'refresh_token',
+            'refresh_token' => $param['refresh_token'],
+            'state' => $param['state'],
+            'scope' => 'read',
+        ];
+        $result = $this->HttpPost('https://oauth.jd.com', 'oauth/token', $config);
+
+        if ($result != '') {
+            $data = json_decode($result);
+            return $data;
+        }
+        return false;
     }
 
 }
